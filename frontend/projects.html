@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Project Explorer – ProjectHub</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Search controls filter projects; projects.js renders matching results below. -->
+  <div id="app">
+    <div class="toolbar">
+      <input type="search" id="q" placeholder="Search projects…" aria-label="Search projects" />
+      <select id="f-category" aria-label="Category"><option value="">All categories</option></select>
+      <select id="f-skill" aria-label="Skill"><option value="">Any skill</option></select>
+      <select id="f-status" aria-label="Status">
+        <option value="">Any status</option>
+        <option value="open">Open</option>
+        <option value="in_progress">In progress</option>
+        <option value="completed">Completed</option>
+      </select>
+    </div>
+    <div id="project-list"></div>
+  </div>
+  <script src="js/api.js"></script>
+  <script src="js/projects.js"></script>
+  <script>initExplorer();</script>
+</body>
+</html>

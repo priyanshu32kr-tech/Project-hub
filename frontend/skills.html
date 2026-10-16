@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Select Your Skills – ProjectHub</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Students select existing skills or add a shared skill, then save their choices. -->
+  <div id="app">
+    <div class="card">
+      <h2>Select Your Skills</h2>
+      <p class="muted">Choose the skills you have. You can change them any time.</p>
+      <form id="add-skill-form" class="skill-add-form">
+        <input id="new-skill" type="text" maxlength="50" placeholder="Add a skill (for example, HTML)" aria-label="New skill" required />
+        <button class="btn btn-outline" id="add-skill" type="submit">Add Skill</button>
+      </form>
+      <p class="muted small">New skills are shared with everyone on ProjectHub.</p>
+      <div id="skill-grid" class="skill-grid"></div>
+      <div class="row between" style="margin-top:20px">
+        <span class="muted small" id="skill-count"></span>
+        <button class="btn" id="save-skills" disabled>Save Skills</button>
+      </div>
+    </div>
+  </div>
+  <script src="js/api.js"></script>
+  <script src="js/skills.js"></script>
+</body>
+</html>

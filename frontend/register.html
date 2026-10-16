@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sign up – ProjectHub</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Registration form collects account details; auth.js validates and submits them. -->
+  <div class="auth">
+    <div class="auth-form">
+      <a class="brand" href="index.html" style="color:var(--text)"><span class="logo">P</span> ProjectHub</a>
+      <h1 style="margin-top:24px">Create your account</h1>
+      <p class="muted">Join ProjectHub and find your team.</p>
+      <div id="form-error" class="alert error hidden" role="alert"></div>
+      <form id="register-form" novalidate>
+        <label for="name">Full name</label>
+        <input id="name" type="text" placeholder="Rahul Kumar" autocomplete="name" required />
+        <label for="email">Email address</label>
+        <input id="email" type="email" placeholder="you@example.com" autocomplete="email" required />
+        <label for="password">Password</label>
+        <input id="password" type="password" placeholder="At least 8 characters, letters and numbers" autocomplete="new-password" required />
+        <label for="confirm">Confirm password</label>
+        <input id="confirm" type="password" placeholder="Repeat your password" autocomplete="new-password" required />
+        <button class="btn btn-block" style="margin-top:22px" type="submit">Create account</button>
+      </form>
+      <p class="muted center small" style="margin-top:18px">Already have an account? <a href="login.html">Log in</a></p>
+    </div>
+    <div class="auth-side">
+      <div class="shield"><i></i></div>
+      <h2>Better Teams<br />Better Projects</h2>
+      <p class="muted">Join ProjectHub as the part of<br />growing community of innovators.</p>
+    </div>
+  </div>
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+  <script>initRegister();</script>
+</body>
+</html>

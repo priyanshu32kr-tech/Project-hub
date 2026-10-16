@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chat – ProjectHub</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- The two-column chat workspace is filled with contacts and messages by chat.js. -->
+  <div id="app">
+    <div class="chat-wrap" id="chat-wrap">
+      <aside class="contacts">
+        <input type="search" id="contact-search" placeholder="Search members…" aria-label="Search members" style="margin-bottom:10px" />
+        <div id="contact-list"></div>
+      </aside>
+      <section class="conversation">
+        <div class="conv-head" id="conv-head"><span class="muted">Select a student to start chatting</span></div>
+        <div class="messages" id="messages"></div>
+        <form class="composer" id="composer">
+          <input type="text" id="msg-input" maxlength="2000" placeholder="Type a message…" autocomplete="off" disabled />
+          <button class="btn" type="submit" id="send-btn" disabled>Send</button>
+        </form>
+      </section>
+    </div>
+  </div>
+  <script src="js/api.js"></script>
+  <script src="js/chat.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Create Project – ProjectHub</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- The project editor reads its fields here, then projects.js creates or updates the record. -->
+  <div id="app">
+    <div class="grid" style="grid-template-columns: minmax(0, 1fr) 280px; align-items:start" id="create-grid">
+      <div class="card">
+        <form id="project-form" novalidate>
+          <label for="p-title">Project name *</label>
+          <input id="p-title" type="text" maxlength="150" placeholder="Enter project name" required />
+          <label for="p-desc">Description *</label>
+          <textarea id="p-desc" maxlength="5000" placeholder="Describe your project in detail…" required></textarea>
+          <div class="form-row">
+            <div><label for="p-category">Category</label>
+              <input id="p-category" type="text" maxlength="60" list="cat-list" placeholder="e.g. AI/ML, Web, IoT" />
+              <datalist id="cat-list"><option>AI/ML</option><option>Web</option><option>Mobile</option><option>IoT</option><option>Design</option><option>Data</option><option>Game</option></datalist></div>
+            <div><label for="p-size">Team members needed *</label>
+              <input id="p-size" type="number" min="2" max="20" value="3" required /></div>
+          </div>
+          <div class="form-row">
+            <div><label for="p-deadline">Deadline</label><input id="p-deadline" type="date" /></div>
+            <div><label for="p-image">Image URL <span class="muted">(optional)</span></label><input id="p-image" type="url" placeholder="https://…" /></div>
+          </div>
+          <label>Required skills</label>
+          <div id="skill-chips" class="chip-select">Loading skills…</div>
+          <div id="status-wrap" class="hidden">
+            <label for="p-status">Status</label>
+            <select id="p-status"><option value="open">Open</option><option value="in_progress">In progress</option><option value="completed">Completed</option></select>
+          </div>
+          <div class="row" style="margin-top:22px">
+            <button class="btn" type="submit" id="submit-btn">Create Project</button>
+            <a class="btn btn-outline" href="projects.html">Cancel</a>
+          </div>
+        </form>
+      </div>
+      <div class="card center" style="background:var(--pink-soft)">
+        <div class="avatar lg" style="background:#fff;color:var(--pink);margin:0 auto 10px">💡</div>
+        <h3>Turn Your Idea Into Reality</h3>
+        <p class="muted small">Add a clear and attractive project image to attract more members.</p>
+      </div>
+    </div>
+  </div>
+  <script src="js/api.js"></script>
+  <script src="js/projects.js"></script>
+  <script>initCreate();</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Notifications – ProjectHub</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Incoming requests and saved notifications are rendered into these containers. -->
+  <div id="app">
+    <div class="card" id="requests-card">
+      <h3>Requests waiting for you</h3>
+      <div id="requests"></div>
+    </div>
+    <div class="row between" style="margin:22px 0 12px">
+      <h3 style="margin:0">Notifications</h3>
+      <button class="btn btn-outline btn-sm" id="read-all">Mark all as read</button>
+    </div>
+    <div id="notif-list"></div>
+  </div>
+  <script src="js/api.js"></script>
+  <script src="js/notifications.js"></script>
+</body>
+</html>

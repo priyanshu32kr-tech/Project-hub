@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ProjectHub – Find the Right Team for Your Next Project</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="landing">
+  <!-- Public landing page: navigation, project overview, counters, and feature highlights. -->
+  <header class="l-nav">
+    <a class="brand" href="index.html"><span class="logo">P</span> ProjectHub</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="matching.html">Students</a>
+      <span id="nav-auth"></span>
+    </nav>
+  </header>
+
+  <!-- Main call to action introduces ProjectHub and links visitors to signup or projects. -->
+  <section class="hero">
+    <div>
+      <h1>Find the <em>Right Team</em><br />for Your Next Project</h1>
+      <p>Connect with talented students, explore exciting projects, and build something amazing together.</p>
+      <div class="cta">
+        <a class="btn" href="register.html" id="cta-start">Get Started</a>
+        <a class="btn btn-ghost" href="projects.html">Explore Projects</a>
+      </div>
+    </div>
+    <div class="hero-logo">
+      <img src="images/projecthub-logo.jpeg" alt="ProjectHub — Build, Collaborate, Grow" />
+    </div>
+  </section>
+
+  <!-- These values are filled by the public /api/stats endpoint. -->
+  <section class="stats-bar" id="stats">
+    <div><b id="stat-active">–</b><span>Active Projects</span></div>
+    <div><b id="stat-matched">–</b><span>Projects Matched</span></div>
+    <div><b id="stat-teams">–</b><span>Teams Forming</span></div>
+  </section>
+
+  <!-- Feature cards summarize the main collaboration tools in the app. -->
+  <section class="features">
+    <h2>Everything your team needs in one place</h2>
+    <div class="grid grid-3">
+      <div class="card feature"><div class="icon">🎯</div><h3>Smart Matching</h3><p class="muted">We compare your skills and interests with each project and show you a match percentage with the reasons.</p></div>
+      <div class="card feature"><div class="icon">🚀</div><h3>Explore Projects</h3><p class="muted">Search real projects, see the skills they need, and apply to join in a click.</p></div>
+      <div class="card feature"><div class="icon">✅</div><h3>Team Dashboard</h3><p class="muted">Track tasks and progress with your teammates so everyone stays on the same page.</p></div>
+      <div class="card feature"><div class="icon">💬</div><h3>One-to-One Chat</h3><p class="muted">Message other students directly to plan, share ideas and get things done.</p></div>
+      <div class="card feature"><div class="icon">🧩</div><h3>Skill Profiles</h3><p class="muted">Show what you know – HTML, CSS, Figma and more – so the right people find you.</p></div>
+      <div class="card feature"><div class="icon">🔔</div><h3>Notifications</h3><p class="muted">Never miss an invitation, a reply or an update from your team.</p></div>
+    </div>
+  </section>
+  <footer class="l-footer">© ProjectHub – built by students, for students.</footer>
+
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+  <script>initHome();</script>
+</body>
+</html>
